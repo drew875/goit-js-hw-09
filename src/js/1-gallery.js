@@ -1,7 +1,7 @@
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-const a = document.querySelector(".gallery");
+const galleryContainer = document.querySelector(".gallery");
 
 const images = [
     {
@@ -77,7 +77,7 @@ const markup = images.map((x) => `
     </li>
 `).join("");
 
-a.insertAdjacentHTML("beforeend", markup);
+galleryContainer.insertAdjacentHTML("beforeend", markup);
 
 new SimpleLightbox('.gallery a', {
     captionsData: "alt",

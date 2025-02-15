@@ -1,5 +1,5 @@
-const a = document.querySelector("form");
-const localStorageKey = "feedback-form-state";
+const form = document.querySelector("form");
+const LOCAL_STORAGE_KEY = "feedback-form-state";
 let formData = JSON.parse(localStorage.getItem(localStorageKey)) || { email: "", message: "" };
 
 
@@ -8,7 +8,7 @@ a.elements.message.value = formData.message;
 
 
 
-a.addEventListener('input', e => {
+form.addEventListener('input', e => {
     formData.email = e.currentTarget.elements.email.value;
     formData.message = e.currentTarget.elements.message.value;
 
