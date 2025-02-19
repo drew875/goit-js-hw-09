@@ -29,7 +29,7 @@ form.addEventListener("submit", (e) => {
         return;
     }
 
-    localStorage.removeItem(LOCAL_STORAGE_KAY);
+    localStorage.removeItem(LOCAL_STORAGE_KEY);
     formData = { email: "", message: "" };
     form.reset();
 });
